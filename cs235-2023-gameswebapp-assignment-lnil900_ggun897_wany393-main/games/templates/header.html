@@ -1,0 +1,25 @@
+<header id="header">
+    <img id="logo" src="{{ url_for('static', filename='logo.png') }}" />
+    <div id="login_status">
+        <a href="{{ url_for('userProfile_bp.user_profile') }}"><img id="profile_icon" src="{{ url_for('static', filename='profile_icon.png') }}"/></a>
+        {% if user != None %}
+            <p> {{ user }}</p>
+        {% else %}
+            <p> Please Log in </p>
+        {% endif %}
+    </div>
+
+    {% if user == None %}
+        <div class="auth_button_container">
+            <a class="auth_button" href="{{ url_for('authentication_bp.login') }}">Login</a>
+            <a class="auth_button" href="{{ url_for('authentication_bp.register') }}">Register</a>
+        </div>
+    {% endif %}
+    {% if user != None %}
+        <div class="auth_button_container">
+            <a class="auth_button" href="{{ url_for('authentication_bp.logout') }}">Logout</a>
+        </div>
+    {% endif %}
+
+
+</header>

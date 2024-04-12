@@ -1,0 +1,22 @@
+<div id = "sidebar">
+
+    <form id="find-game" action = "{{ url_for('gamesList_bp.games_list') }}">
+        <h1>FIND GAME</h1>
+        <input type="search" id="searchGames" name="search" placeholder = "SEARCH BY GAME NAME...">
+        <h3>CHOOSE PUBLISHER</h3>
+        <select name="selectPublisher" id="selectPublisher">
+            <option value="">All</option>
+            {% for publisher in publishers %}
+                <option value="{{ publisher.publisher_name }}">{{ publisher.publisher_name }}</option>
+            {% endfor %}
+        </select>
+        <h3>AND/OR FILTER BY GENRE</h3>
+        {% for genre in genres %}
+            <input type="checkbox" id="{{ genre.genre_name }}" name="genre_filter" value="{{ genre.genre_name }}">
+            <label for="{{ genre.genre_name }}"> {{ genre.genre_name }}</label><br>
+        {% endfor %}
+        <Button>FIND GAME</Button>
+    </form>
+
+
+</div>

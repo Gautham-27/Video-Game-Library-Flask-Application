@@ -1,0 +1,23 @@
+{% extends 'layout.html' %} {% block content %}
+<div id="profile_container">
+    <div id="name_card">
+        <h3>{{ user }}</h3>
+    </div>
+    <div id="wishlist">
+        <h3>MY WISHLIST</h3>
+            {% for item in wishlist %}
+                <div id="display_wishlist">
+                    <h4><a href="{{ url_for('gameDescription_bp.game_description', id=item.game_id) }}">{{ item.title }}</a> | <span class="colour">Genres:</span> {% for genre in item.genres %}{{genre.genre_name}}, {% endfor %} |
+                    <span class="colour">Price:</span> ${{ item.price }} |  <a id="remove" href="{{ url_for('gameDescription_bp.wishlist_request', id=item.game_id) }}">Remove Game</a></h4>
+                </div>
+            {% endfor %}
+    </div>
+    <div id="history">
+        <h3>My History</h3>
+        {% for item in history %}
+        <p><span class="colour">{{ item[1] }}</span>: {{ item[0] }}</p>
+        {% endfor %}
+</div>
+</div>
+
+{% endblock %}

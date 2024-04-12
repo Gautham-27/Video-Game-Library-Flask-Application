@@ -1,0 +1,17 @@
+{% extends 'layout.html' %} {% block content %}
+
+<h2>User: {{ user}}</h2>
+<br>
+
+<h2>Wishlist:</h2>
+{% for item in wishlist %}
+    <p>- {{ item }}</p>
+{% endfor %}
+<br>
+
+<h2>History:</h2>
+{% for item in history %}
+    <p>- {{ item }}</p>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,706 @@
+body, html{
+    height: 100%;
+    margin: 0px;
+
+}
+
+#header {
+  height: 10%;
+  background: #563da1;
+  border-bottom: 2px solid white;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0px;
+  width: 100%;
+
+}
+
+#logo{
+    float: left;
+    height: 65%;
+    margin: 10px;
+    margin-left: 20px;
+
+
+}
+
+#searchForm{
+    float: right;
+    font-family: 'Roboto', sans-serif;
+    width: 25%;
+    height: 100%;
+
+}
+
+
+#searchForm button{
+    height: 40%;
+    border-radius: 5px;
+    border: 2px solid #dddaeb;
+    background: #2c318f;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    transition-duration: 0.2s;
+}
+
+#searchForm button:hover{
+    border: solid 2px white;
+    background: #050a69;
+}
+
+
+
+
+
+
+
+
+
+#content{
+    display: flex;
+    width: 100%;
+    height: 85%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    background: #dddaeb;
+}
+
+#games-content{
+    width: 88%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    order: 2;
+    overflow-y: scroll;
+}
+
+
+#nav {
+    order: 1;
+    width: 12%;
+    height: 100%;
+    background-image: linear-gradient(#563da1, #b0acfa, #2c318f);
+}
+
+.link-nav{
+    padding: 10px;
+    display: block;
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: large;
+    background: #2c318f;
+}
+
+.link-nav:hover{
+    border: 1px solid white;
+
+}
+
+#container{
+    order: 1;
+    width: 80%;
+    height: auto;
+    background: white;
+    margin: 0.7%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow: scroll;
+
+
+}
+
+#sidebar{
+
+    order: 2;
+    width: 20%;
+    height: 100%;
+    background: #2c318f;
+    margin: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+}
+
+#sidebar h1{
+      font-family: 'Roboto', sans-serif;
+      font-weight: 800;
+      color: white;
+      text-align: center;
+      font-size: 2vh;
+}
+
+#game-list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100%;
+
+
+
+}
+
+#game-card{
+    background: #f0f0f7;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 12%;
+    font-size: 0.8vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+
+
+
+}
+
+#card-image{
+    order: 1;
+    height: 100%;
+
+
+
+}
+
+
+
+#card-container{
+    order: 2;
+    margin-left: 5%;
+
+}
+
+#genre-container{
+    order: 3;
+    margin-left: 5%;
+ }
+
+
+#card-container h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    color: #050a69;
+}
+
+#game-title{
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #050a69;
+      margin: 1%;
+
+
+}
+
+#description-card{
+    background: #f0f0f7;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 40%;
+    border-radius: 8px;
+
+
+
+}
+
+#game-image{
+    order: 0;
+    width: 50%;
+    border-radius: 8px;
+}
+
+#desc-card-info{
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+#desc-card-info h3{
+    height: 15%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 2vh;
+
+}
+
+.icon{
+    max-height: 100%;
+    padding-top: 1.5%;
+    padding-right: 2%;
+
+}
+
+#description{
+    background: #f0f0f7;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    border-radius: 8px;
+    padding: 1.5%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    font-weight: 400;
+    font-size: small;
+
+}
+
+#action_block{
+    background: #f0f0f7;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    border-radius: 8px;
+    padding: 1.5%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    font-weight: 400;
+    text-align: center;
+    font-size: small;
+
+}
+
+#review_block{
+    background: #f0f0f7;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    border-radius: 8px;
+    padding: 1%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    font-weight: 400;
+    height: auto%;
+    color: #050a69;
+    margin-bottom: 1%;
+
+
+}
+
+.colour{
+    color: #563da1;
+}
+
+#list-controls{
+    height: 10%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+     background: #f0f0f7;
+
+}
+
+
+.list-button-left{
+
+    border-radius: 5px;
+    border: 2px solid #dddaeb;
+    background: #2c318f;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    transition-duration: 0.2s;
+    height: 30%;
+    width: 30%;
+    margin: 5%;
+
+}
+
+.list-button-right:hover{
+    border: solid 2px white;
+    background: #050a69;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.list-button-right{
+
+    border-radius: 5px;
+    border: 2px solid #dddaeb;
+    background: #2c318f;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    transition-duration: 0.2s;
+    height: 30%;
+    width: 30%;
+    float:right;
+    margin: 5%;
+
+}
+
+.list-button-left:hover{
+    border: solid 2px white;
+    background: #050a69;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+#controls-right{
+    height: 100%;
+    float: right;
+    width: 50%;
+}
+
+
+
+#controls-left{
+    height: 100%;
+    float: left;
+    width: 50%;
+}
+
+#find-game{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    height: 50%;
+    padding: 3%;
+    font-size: 1vh;
+}
+
+#find-game label{
+    padding-bottom: 3px;
+}
+
+#find-game button{
+    border-radius: 5px;
+    border: 2px solid #dddaeb;
+    background: #563da1;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    transition-duration: 0.2s;
+    height: 5%;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 3%;
+    font-size: 1vh;
+
+
+}
+
+#find-game button:hover{
+    border: solid 2px white;
+    background: #050a69;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+#find-game input[type="search"]{
+    margin-top: 0.5%;
+    margin-left: 15%;
+    height: 8%;
+    width: 70%;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    border: 2px solid #dddaeb;
+    colour: #2c318f;
+    font-size: 1vh;
+
+
+
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+    background: #030640;
+    display: block;
+
+}
+
+/* Header css */
+
+
+.auth_button_container{
+    float: right;
+    width: 20%;
+    padding-top: 1.5%;
+}
+
+.auth_button{
+    padding: 2%;
+    display: inline-block;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: large;
+    background: #2c318f;
+    width: 40%;
+    float: right;
+    margin-right: 1%;
+
+}
+
+.auth_button:hover{
+    border: 2px solid white;
+}
+
+#login_status{
+    float: right;
+    width: 10%;
+    height: 90%;
+    padding-top: 0.5%;
+    border-left: 1px solid white;
+    margin-left: 1%;
+
+}
+
+#login_status p{
+    margin: 0;
+    font-size: 1.5vh;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+
+}
+
+
+#profile_icon{
+    height: 50%;
+    width: auto;
+
+}
+
+/* Authentication style */
+
+#credentials_title{
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #050a69;
+      text-align: center;
+}
+
+.credentials_field{
+    width: 70%;
+}
+
+#credentials_container{
+    width: 70%;
+    height: 60%;
+    background: #f0f0f7;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    margin-left: 13%;
+    padding: 2%;
+
+}
+
+#credentials_form{
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#credentials_form input[type="text"]{
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 20px;
+    border: 1px solid #563da1;
+    background-color: white;
+    display: inline-block;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    font-size: x-large;
+
+}
+
+#credentials_form input[type="password"]{
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 20px;
+    border: 1px solid #563da1;
+    background-color: white;
+    display: inline-block;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-size: x-large;
+
+}
+
+#credentials_form input[type="submit"]{
+    width: 20%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    margin-left: 40%;
+    border-radius: 20px;
+    font-size: large;
+    cursor: pointer;
+    background-color: #563da1;
+    border: none;
+    color: white;
+    font-weight: 700;
+}
+
+#credentials_form h4{
+    color: red;
+}
+
+#credentials_form input[type="submit"]:hover{
+    background-color: #291170;
+    border: 2px solid white;
+}
+
+
+#credentials_form label{
+    font-weight: 700;
+    color: #050a69;
+    font-size: 1.5vh;
+
+}
+
+/* User profile */
+
+#profile_container{
+    background: #f0f0f7;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 8px;
+    width: 96%;
+    margin-left: 2%;
+    height: 90%;
+
+}
+
+#name_card{
+    height: 10%;
+    width: 60%;
+    background: #846dc9;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 8px 0px 0px 0px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    font-size: 3vh;
+    padding-left: 2%;
+    text-transform: uppercase;
+    display: block;
+}
+
+#name_card h3{
+    padding: 2%;
+}
+
+
+#wishlist{
+    display: block;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    font-family: 'Roboto', sans-serif;
+    width: 96%;
+    height: auto;
+    margin-left: 2%;
+    margin-top: 2%;
+    padding: 0.5%;
+    color: #050a69;
+    border-radius: 8px;
+}
+
+#history{
+    display: block;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    font-family: 'Roboto', sans-serif;
+    width: 96%;
+    height: auto;
+    margin-left: 2%;
+    margin-top: 2%;
+    padding: 0.5%;
+    color: #050a69;
+    border-radius: 8px;
+}
+
+
+#remove{
+    float: right;
+    color: red;
+    margin-right: 10%;
+}
+
+
+.desc_button{
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: small;
+    background: #563da1;
+    width: 20%;
+    padding: 0.5%;
+    margin-right: 2.5%;
+    float: left;
+    margin-top: 1%;
+
+}
+
+.desc_button:hover{
+    background-color: #291170;
+
+}
+
+#review{
+    border-top: 2px solid #563da1;
+    background-color: white;
+    border-radius: 8px;
+
+}
+
+#review_form input[type="submit"]{
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: small;
+    background: #563da1;
+    padding: 0.2%;
+    cursor: pointer;
+
+}
+
+#review_form input[type="submit"]:hover{
+    background-color: #291170;
+}
+
+#selectPublisher{
+    width: 90%;
+}
+
+
+
+
+
+
+/* All icons used are free to use with attribution to Flaticon */
+
+
+
+
+
+
+

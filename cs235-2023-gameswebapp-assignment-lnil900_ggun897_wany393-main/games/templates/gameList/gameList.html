@@ -1,0 +1,34 @@
+{% extends 'layout.html' %} {% block content %}
+    <div id="game-list">
+            <div id="list-controls">
+                <div id="controls-left">
+                    <Button class="list-button-left" onclick="window.location.href='{{pagination_urls['first']}}';">First</Button>
+                    <Button class="list-button-left" onclick="window.location.href='{{pagination_urls['prev']}}';">Previous</Button>
+                </div>
+                <div id="controls-right">
+                    <Button class="list-button-right" onclick="window.location.href='{{pagination_urls['last']}}';">Last</Button>
+                    <Button class="list-button-right" onclick="window.location.href='{{pagination_urls['next']}}';">Next</Button>
+                </div>
+
+            </div>
+            {% for game in games_list %}
+
+            <div id="game-card">
+                <a href="{{ url_for('gameDescription_bp.game_description', id=game.game_id) }}"><img id = "card-image" src={{game.image_url}}></a>
+                <div id="card-container">
+                    <h2>{{ game.title }}</h2>
+                    <h4><span class="colour">Price:</span> ${{game.price }}</h4>
+                    <h4><span class="colour">Release Date:</span> {{ game.release_date }}</h4>
+                    <a href="{{ url_for('gameDescription_bp.game_description', id=game.game_id) }}"> More Info </a>
+                </div>
+                <div id="genre-container">
+                    <h4><span class="colour">Genres:</span>
+                    {% for genre in game.genres %}
+                        {{genre.genre_name}},
+                    {% endfor %}
+                    </h4>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
